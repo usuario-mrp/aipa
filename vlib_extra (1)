@@ -1,0 +1,56 @@
+[
+  {"param": "addFlags", "str": "VLIB_ENABLE_DEBUG_MESSAGES VLIB_ENABLE_QR_LIST VLIB_ENABLE_PERIODIC_DIAG VLIB_AUTO_EMV_KEY_TYPE"},
+  {"param": "VLIB_DATA_SET_LOG_TYPES", "str": "VLIB VSAM LIST CONFIG AVR HASH HTTP SLS ADAPT PSP MEM VMESH USER"},
+  {"param": "VLIB_DATA_SET_LOG_LEVELS", "str": "DEBUG WARN INFO ERROR"},
+  {"param": "VLIB_DATA_APP_NAME", "str": "IMASD-CLIENT"},
+  {"param": "VLIB_DATA_HASH_PAGES", "num": 65536},
+  {"param": "MTT_DATA_PAGES_RELOAD", "num": 262144},
+
+  //EMV stuff
+  {"param": "VLIB_DATA_MAX_OFFLINE_TAPS", "num": 40},
+  {"param": "VLIB_DATA_MAX_OFFLINE_TIME", "num": 3600},
+  {"param": "VLIB_DATA_UNIFIED_CHECK_INTERVAL", "num": 300},
+  {"param": "VLIB_DATA_TAP_LIMIT_WINDOW_1", "num": 2},
+  {"param": "VLIB_DATA_TIME_LIMIT_WINDOW_1", "num": 3600},
+  {"param": "VLIB_DATA_TAP_LIMIT_WINDOW_2", "num": 2},
+  {"param": "VLIB_DATA_TIME_LIMIT_WINDOW_2", "num": 3600},
+
+  //QR code
+  {"param": "VLIB_DATA_QR_CHECK_INTERVAL", "num": 900},
+  {"param": "VLIB_DATA_MAX_QR_OFFLINE_TAPS", "num": 100},
+  {"param": "VLIB_DATA_MAX_QR_OFFLINE_TIME", "num": 64000},
+
+  {"param": "VLIB_DATA_SYNC_TRIES", "num": 1},
+  {"param": "VLIB_DATA_SYNC_BETWEEN_RETRY", "num": 1},
+  {"param": "VLIB_DATA_SYNC_TIMEOUT", "num": 40},
+  {"param": "VLIB_DATA_PING_SILENCE", "num": 10},
+  {"param": "VLIB_DATA_PRECONNECT", "num": 0},
+  {"param": "VLIB_DATA_DNS_TTL", "num": 600},
+  {"param": "VLIB_DATA_DNS_TIMEOUT", "num": 10},
+  {"param": "VLIB_DATA_QR_TOLERANCE", "num": 4},
+
+  {"param": "VLIB_DATA_DEVICE_ID", "str": "$CSN"},
+  {"param": "VLIB_DATA_IGNORE_ATQSAK", "str": "440320"},
+  
+   //Litlepay PRODUCTION environment
+  {"param": "VLIB_DATA_SET_TLS_SERVER_CERT", "str": "littlepay-trust-bundle-g2-only.pem"},
+  {"param": "VLIB_DATA_SET_TLS_CLIENT_KEY", "str" :"priv.key" },
+  {"param": "VLIB_DATA_SET_TLS_CLIENT_CERT", "str" :"cert.pem" },
+  {"param": "VLIB_DATA_SET_PSP_CLIB", "str": "littlepay:emv hmac"},
+  {"param": "LITTLEPAY_HASH_KEY_IDS", "str": "cancun" },
+  {"param": "LITTLEPAY_DEVICE_ID_ISSUER", "str": "planeta" },
+  {"param": "LITTLEPAY_LIST_KEY_IDS", "str": "HMAC.Cancun" },
+  {"param": "LITTLEPAY_DATA_SET_PSP_ADDRESS", "str": "api.littlepay.com" },
+  {"param": "LITTLEPAY_LIST_FUNCTION", "str": "AUTO" },
+  {"param": "LITTLEPAY_DEFAULT_LATITUDE", "str": "18.5318" },
+  {"param": "LITTLEPAY_DEFAULT_LONGITUDE", "str": "-88.3080" },
+
+  //IMASD environment
+  {"param": "VLIB_DATA_SET_PSP_CLIB", "str": "mtt:config qr sync"},
+  {"param": "MTT_DATA_SET_PSP_ADDRESS", "str": "https://api-recaudo.movilidaddelbienestar.org.mx/api/v1/vsam/" },
+  {"param": "MTT_DATA_SYNC_CLOSEDLOOP", "str": "1D1D 1001 1002 1C1C" },
+  {"param": "MTT_DATA_INTERVAL_RELOAD", "num": 60},
+  {"param": "MTT_DATA_INTERVAL_TABLES", "num": 900},
+  {"param": "VLIB_DATA_SET_QR_USE_BIT", "num": 1},
+  {"param": "VLIB_DATA_CONFIG_CHECK_INTERVAL", "num": 600}
+]
